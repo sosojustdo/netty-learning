@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/netty-learning.iml" filepath="$PROJECT_DIR$/.idea/modules/netty-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/netty-learning_main.iml" filepath="$PROJECT_DIR$/.idea/modules/netty-learning_main.iml" group="netty-learning" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/netty-learning_test.iml" filepath="$PROJECT_DIR$/.idea/modules/netty-learning_test.iml" group="netty-learning" />
+    </modules>
+  </component>
+</project>
