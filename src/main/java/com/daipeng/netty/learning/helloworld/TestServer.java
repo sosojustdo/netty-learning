@@ -6,6 +6,13 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+/**
+ *
+ * @Description: HttpServer
+ * @auther: daipeng
+ * @email: daipeng.456@163.com
+ * @date: 2018/10/7 下午1:54
+ */
 public class TestServer {
 
     public static void main(String[] args) throws InterruptedException {
