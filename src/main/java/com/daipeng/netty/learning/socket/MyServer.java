@@ -7,7 +7,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
- * @Description: Socket Server
+ * @Description: Loop Socket Server
+ * @Note：服务端与客户端循环发送消息
  * @Auther: daipeng
  * @Email: daipeng.456@163.com
  * @Date: 2018/10/7 14:28

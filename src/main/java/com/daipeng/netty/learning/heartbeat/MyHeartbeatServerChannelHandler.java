@@ -28,10 +28,12 @@ public class MyHeartbeatServerChannelHandler extends ChannelInboundHandlerAdapte
             String eventType = "";
             switch (event.state()){
                 case READER_IDLE:
+                    //ctx.close(); 建立好的连接，客户端在readIdleTime时间没有给服务器发送消息，服务器主动关闭连接，类似Http1.1 KeepAlive。
                     eventType = "读超时";
                     break;
 
                 case WRITER_IDLE:
+                    //ctx.writeAndFlush(new PingMessage()); 建立好的连接, 服务端在超过writeIdleTime时间后，可以主动推送消息告诉客户端，完成重连。
                     eventType = "写超时";
                     break;
 
