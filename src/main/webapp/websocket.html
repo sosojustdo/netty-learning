@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket测试页面</title>
+</head>
+
+<script type="application/javascript">
+    
+    var websocket = new WebSocket("ws://localhost:8899/ws");
+
+    websocket.onopen = function (event) {
+        ouput("成功建立了websocket连接");
+    }
+    
+
+    websocket.onmessage = function (event) {
+        var receiveContent = document.getElementById("receiveTextarea").value;
+        var showContent = receiveContent + "\n" + event.data;
+        ouput("");
+        ouput(showContent);
+    }
+
+    websocket.close = function (code, reason) {
+        ouput("断开websocket连接");
+    }
+    
+    function sendMessage() {
+        var sendContent = document.getElementById("sendTextarea").value;
+        websocket.send(sendContent);
+    }
+
+    function clearMessage() {
+        ouput("");
+    }
+
+    function ouput (message) {
+        document.getElementById("receiveTextarea").value = message;
+    }
+</script>
+
+<body>
+    <h1>Netty-WebSocket Demo Chat</h1><br/>
+
+    <form class="websocket_form" onsubmit="return false;">
+        <textarea rows="20", cols="50" id="sendTextarea"></textarea>
+        <button type="button" onClick="sendMessage()" id="send">发送数据</button>
+        <button type="button" onclick="closeConnect()" id="close">断开连接</button>
+        </br></br></br>
+        <textarea rows="20", cols="50" id="receiveTextarea"></textarea>
+        <button type="button" onClick="clearMessage()" id="clear">清除数据</button>
+    </form>
+
+</body>
+</html>
